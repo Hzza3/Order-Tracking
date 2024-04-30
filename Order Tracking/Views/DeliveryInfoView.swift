@@ -17,10 +17,12 @@ struct DeliveryInfoView: View {
             Text(address)
                 .font(.caption)
                 .fontWeight(.semibold)
-            Spacer(minLength: 30)
+                .lineLimit(nil)
+            Spacer()
             CircularProgressView(progress: progress, eta: estimatedDeliveryTime)
                 .frame(width: 50, height: 50)
         }
+        .padding(.all, 20)
     }
 }
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F7A1A072BE0F23100C3AED3 /* Order_TrackingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A062BE0F23100C3AED3 /* Order_TrackingApp.swift */; };
-		2F7A1A092BE0F23100C3AED3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A082BE0F23100C3AED3 /* ContentView.swift */; };
+		2F7A1A092BE0F23100C3AED3 /* OrderTrackingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A082BE0F23100C3AED3 /* OrderTrackingScreen.swift */; };
 		2F7A1A0B2BE0F23200C3AED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F7A1A0A2BE0F23200C3AED3 /* Assets.xcassets */; };
 		2F7A1A0E2BE0F23200C3AED3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F7A1A0D2BE0F23200C3AED3 /* Preview Assets.xcassets */; };
 		2F7A1A152BE0F2AD00C3AED3 /* StatusDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A142BE0F2AD00C3AED3 /* StatusDetailsView.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		2F7A1A032BE0F23100C3AED3 /* Order Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Order Tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7A1A062BE0F23100C3AED3 /* Order_TrackingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order_TrackingApp.swift; sourceTree = "<group>"; };
-		2F7A1A082BE0F23100C3AED3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F7A1A082BE0F23100C3AED3 /* OrderTrackingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingScreen.swift; sourceTree = "<group>"; };
 		2F7A1A0A2BE0F23200C3AED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F7A1A0D2BE0F23200C3AED3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F7A1A142BE0F2AD00C3AED3 /* StatusDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDetailsView.swift; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 				2F7A1A162BE0F2B500C3AED3 /* Views */,
 				2F7A1A172BE0F37900C3AED3 /* OrderTrackingViewModel.swift */,
 				2F7A1A062BE0F23100C3AED3 /* Order_TrackingApp.swift */,
-				2F7A1A082BE0F23100C3AED3 /* ContentView.swift */,
 				2F7A1A0A2BE0F23200C3AED3 /* Assets.xcassets */,
 				2F7A1A0C2BE0F23200C3AED3 /* Preview Content */,
 			);
@@ -85,10 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				2F7A1A142BE0F2AD00C3AED3 /* StatusDetailsView.swift */,
+				2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */,
 				2F7A1A192BE0F6D200C3AED3 /* DeliveryInfoView.swift */,
 				2F7A1A1B2BE0FE1400C3AED3 /* CircularProgressView.swift */,
 				2F7A1A1D2BE105FD00C3AED3 /* TrackingDetailsView.swift */,
-				2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */,
+				2F7A1A082BE0F23100C3AED3 /* OrderTrackingScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 				2F7A1A1C2BE0FE1400C3AED3 /* CircularProgressView.swift in Sources */,
 				2F7A1A202BE11DE800C3AED3 /* StatusTrackView.swift in Sources */,
 				2F7A1A152BE0F2AD00C3AED3 /* StatusDetailsView.swift in Sources */,
-				2F7A1A092BE0F23100C3AED3 /* ContentView.swift in Sources */,
+				2F7A1A092BE0F23100C3AED3 /* OrderTrackingScreen.swift in Sources */,
 				2F7A1A072BE0F23100C3AED3 /* Order_TrackingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

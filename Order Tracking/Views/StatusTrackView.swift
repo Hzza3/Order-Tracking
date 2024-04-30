@@ -50,10 +50,11 @@ extension StatusTrackView {
                 .resizable()
                 .frame(width: 24, height: 24)
                 .foregroundColor(iconColor)
-            Rectangle()
-                .frame(width: 75, height: 4)
-                .foregroundColor(trackColor)
-                .opacity(0.5)
+            if !isLast {
+                Rectangle()
+                    .frame(width: 75, height: 3)
+                    .foregroundColor(trackColor)
+            }
         }
     }
 }

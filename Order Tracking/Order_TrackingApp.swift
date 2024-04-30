@@ -11,7 +11,7 @@ import SwiftUI
 struct Order_TrackingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OrderTrackingScreen()
         }
     }
 }
