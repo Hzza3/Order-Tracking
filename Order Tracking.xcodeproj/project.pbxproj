@@ -15,6 +15,8 @@
 		2F7A1A182BE0F37900C3AED3 /* OrderTrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A172BE0F37900C3AED3 /* OrderTrackingViewModel.swift */; };
 		2F7A1A1A2BE0F6D200C3AED3 /* DeliveryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A192BE0F6D200C3AED3 /* DeliveryInfoView.swift */; };
 		2F7A1A1C2BE0FE1400C3AED3 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A1B2BE0FE1400C3AED3 /* CircularProgressView.swift */; };
+		2F7A1A1E2BE105FD00C3AED3 /* TrackingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A1D2BE105FD00C3AED3 /* TrackingDetailsView.swift */; };
+		2F7A1A202BE11DE800C3AED3 /* StatusTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		2F7A1A172BE0F37900C3AED3 /* OrderTrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingViewModel.swift; sourceTree = "<group>"; };
 		2F7A1A192BE0F6D200C3AED3 /* DeliveryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryInfoView.swift; sourceTree = "<group>"; };
 		2F7A1A1B2BE0FE1400C3AED3 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		2F7A1A1D2BE105FD00C3AED3 /* TrackingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDetailsView.swift; sourceTree = "<group>"; };
+		2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTrackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				2F7A1A142BE0F2AD00C3AED3 /* StatusDetailsView.swift */,
 				2F7A1A192BE0F6D200C3AED3 /* DeliveryInfoView.swift */,
 				2F7A1A1B2BE0FE1400C3AED3 /* CircularProgressView.swift */,
+				2F7A1A1D2BE105FD00C3AED3 /* TrackingDetailsView.swift */,
+				2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,8 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7A1A182BE0F37900C3AED3 /* OrderTrackingViewModel.swift in Sources */,
+				2F7A1A1E2BE105FD00C3AED3 /* TrackingDetailsView.swift in Sources */,
 				2F7A1A1A2BE0F6D200C3AED3 /* DeliveryInfoView.swift in Sources */,
 				2F7A1A1C2BE0FE1400C3AED3 /* CircularProgressView.swift in Sources */,
+				2F7A1A202BE11DE800C3AED3 /* StatusTrackView.swift in Sources */,
 				2F7A1A152BE0F2AD00C3AED3 /* StatusDetailsView.swift in Sources */,
 				2F7A1A092BE0F23100C3AED3 /* ContentView.swift in Sources */,
 				2F7A1A072BE0F23100C3AED3 /* Order_TrackingApp.swift in Sources */,

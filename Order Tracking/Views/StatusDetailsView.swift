@@ -11,6 +11,7 @@ struct StatusDetailsView: View {
     
     let status: String
     let date: String
+    let showDate: Bool
     
     var body: some View {
         VStack(alignment: .leading,spacing: 3) {
@@ -19,6 +20,7 @@ struct StatusDetailsView: View {
                 .fontWeight(.light)
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
+            
             HStack {
                 Image(systemName: "clock")
                     .resizable()
@@ -26,12 +28,13 @@ struct StatusDetailsView: View {
                     .frame(width: 16, height: 16)
                 Text(date)
                     .font(.caption)
-                    .fontWeight(.thin)
-            }
+                    .fontWeight(.light)
+            }.opacity(showDate ? 1.0 : 0.0)
+            
         }
     }
 }
 
 #Preview {
-    StatusDetailsView(status: "Order Recived", date: "9:10 Am, 9 May 2018")
+    StatusDetailsView(status: "Order Recived", date: "9:10 Am, 9 May 2018", showDate: true)
 }
