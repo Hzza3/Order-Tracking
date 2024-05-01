@@ -17,6 +17,16 @@
 		2F7A1A1C2BE0FE1400C3AED3 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A1B2BE0FE1400C3AED3 /* CircularProgressView.swift */; };
 		2F7A1A1E2BE105FD00C3AED3 /* TrackingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A1D2BE105FD00C3AED3 /* TrackingDetailsView.swift */; };
 		2F7A1A202BE11DE800C3AED3 /* StatusTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */; };
+		2F7A1A242BE14DF000C3AED3 /* VerticalDesignConfigurations.json in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A232BE14DF000C3AED3 /* VerticalDesignConfigurations.json */; };
+		2F7A1A262BE153F400C3AED3 /* TrackingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A252BE153F400C3AED3 /* TrackingInformation.swift */; };
+		2F7A1A282BE1553F00C3AED3 /* StatusTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A272BE1553F00C3AED3 /* StatusTracking.swift */; };
+		2F7A1A2A2BE1556E00C3AED3 /* DeliveryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A292BE1556E00C3AED3 /* DeliveryInformation.swift */; };
+		2F7A1A2C2BE155A500C3AED3 /* StatusTrackingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A2B2BE155A500C3AED3 /* StatusTrackingItem.swift */; };
+		2F7A1A2E2BE1597E00C3AED3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A2D2BE1597E00C3AED3 /* NetworkManager.swift */; };
+		2F7A1A302BE1632400C3AED3 /* VerticalDesignConfigurations.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F7A1A232BE14DF000C3AED3 /* VerticalDesignConfigurations.json */; };
+		2F7A1A322BE1647F00C3AED3 /* HorizontalDesignConfigurations.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F7A1A312BE1647F00C3AED3 /* HorizontalDesignConfigurations.json */; };
+		2F7A1A342BE16C0C00C3AED3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A332BE16C0C00C3AED3 /* Color+Extension.swift */; };
+		2F7A1A362BE17FC100C3AED3 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A1A352BE17FC100C3AED3 /* DateHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +41,15 @@
 		2F7A1A1B2BE0FE1400C3AED3 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		2F7A1A1D2BE105FD00C3AED3 /* TrackingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDetailsView.swift; sourceTree = "<group>"; };
 		2F7A1A1F2BE11DE800C3AED3 /* StatusTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTrackView.swift; sourceTree = "<group>"; };
+		2F7A1A232BE14DF000C3AED3 /* VerticalDesignConfigurations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VerticalDesignConfigurations.json; sourceTree = "<group>"; };
+		2F7A1A252BE153F400C3AED3 /* TrackingInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInformation.swift; sourceTree = "<group>"; };
+		2F7A1A272BE1553F00C3AED3 /* StatusTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTracking.swift; sourceTree = "<group>"; };
+		2F7A1A292BE1556E00C3AED3 /* DeliveryInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryInformation.swift; sourceTree = "<group>"; };
+		2F7A1A2B2BE155A500C3AED3 /* StatusTrackingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTrackingItem.swift; sourceTree = "<group>"; };
+		2F7A1A2D2BE1597E00C3AED3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2F7A1A312BE1647F00C3AED3 /* HorizontalDesignConfigurations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HorizontalDesignConfigurations.json; sourceTree = "<group>"; };
+		2F7A1A332BE16C0C00C3AED3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		2F7A1A352BE17FC100C3AED3 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +82,10 @@
 		2F7A1A052BE0F23100C3AED3 /* Order Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				2F7A1A2F2BE1599F00C3AED3 /* Helpers */,
+				2F7A1A222BE14DCF00C3AED3 /* Models */,
+				2F7A1A212BE14DC100C3AED3 /* ViewModels */,
 				2F7A1A162BE0F2B500C3AED3 /* Views */,
-				2F7A1A172BE0F37900C3AED3 /* OrderTrackingViewModel.swift */,
 				2F7A1A062BE0F23100C3AED3 /* Order_TrackingApp.swift */,
 				2F7A1A0A2BE0F23200C3AED3 /* Assets.xcassets */,
 				2F7A1A0C2BE0F23200C3AED3 /* Preview Content */,
@@ -91,6 +112,37 @@
 				2F7A1A082BE0F23100C3AED3 /* OrderTrackingScreen.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2F7A1A212BE14DC100C3AED3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2F7A1A172BE0F37900C3AED3 /* OrderTrackingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2F7A1A222BE14DCF00C3AED3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F7A1A252BE153F400C3AED3 /* TrackingInformation.swift */,
+				2F7A1A272BE1553F00C3AED3 /* StatusTracking.swift */,
+				2F7A1A292BE1556E00C3AED3 /* DeliveryInformation.swift */,
+				2F7A1A2B2BE155A500C3AED3 /* StatusTrackingItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F7A1A2F2BE1599F00C3AED3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F7A1A232BE14DF000C3AED3 /* VerticalDesignConfigurations.json */,
+				2F7A1A312BE1647F00C3AED3 /* HorizontalDesignConfigurations.json */,
+				2F7A1A2D2BE1597E00C3AED3 /* NetworkManager.swift */,
+				2F7A1A332BE16C0C00C3AED3 /* Color+Extension.swift */,
+				2F7A1A352BE17FC100C3AED3 /* DateHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +203,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7A1A302BE1632400C3AED3 /* VerticalDesignConfigurations.json in Resources */,
+				2F7A1A322BE1647F00C3AED3 /* HorizontalDesignConfigurations.json in Resources */,
 				2F7A1A0E2BE0F23200C3AED3 /* Preview Assets.xcassets in Resources */,
 				2F7A1A0B2BE0F23200C3AED3 /* Assets.xcassets in Resources */,
 			);
@@ -164,11 +218,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7A1A182BE0F37900C3AED3 /* OrderTrackingViewModel.swift in Sources */,
+				2F7A1A342BE16C0C00C3AED3 /* Color+Extension.swift in Sources */,
+				2F7A1A282BE1553F00C3AED3 /* StatusTracking.swift in Sources */,
+				2F7A1A2A2BE1556E00C3AED3 /* DeliveryInformation.swift in Sources */,
+				2F7A1A262BE153F400C3AED3 /* TrackingInformation.swift in Sources */,
+				2F7A1A242BE14DF000C3AED3 /* VerticalDesignConfigurations.json in Sources */,
 				2F7A1A1E2BE105FD00C3AED3 /* TrackingDetailsView.swift in Sources */,
+				2F7A1A2C2BE155A500C3AED3 /* StatusTrackingItem.swift in Sources */,
 				2F7A1A1A2BE0F6D200C3AED3 /* DeliveryInfoView.swift in Sources */,
 				2F7A1A1C2BE0FE1400C3AED3 /* CircularProgressView.swift in Sources */,
 				2F7A1A202BE11DE800C3AED3 /* StatusTrackView.swift in Sources */,
+				2F7A1A2E2BE1597E00C3AED3 /* NetworkManager.swift in Sources */,
 				2F7A1A152BE0F2AD00C3AED3 /* StatusDetailsView.swift in Sources */,
+				2F7A1A362BE17FC100C3AED3 /* DateHelpers.swift in Sources */,
 				2F7A1A092BE0F23100C3AED3 /* OrderTrackingScreen.swift in Sources */,
 				2F7A1A072BE0F23100C3AED3 /* Order_TrackingApp.swift in Sources */,
 			);

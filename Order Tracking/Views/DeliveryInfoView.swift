@@ -10,7 +10,7 @@ import SwiftUI
 struct DeliveryInfoView: View {
     let address: String
     let progress: Double
-    let estimatedDeliveryTime: Int
+    let remainingDeliveryTime: String?
     
     var body: some View {
         HStack {
@@ -19,7 +19,7 @@ struct DeliveryInfoView: View {
                 .fontWeight(.semibold)
                 .lineLimit(nil)
             Spacer()
-            CircularProgressView(progress: progress, eta: estimatedDeliveryTime)
+            CircularProgressView(progress: progress, eta: remainingDeliveryTime)
                 .frame(width: 50, height: 50)
         }
         .padding(.all, 20)
@@ -27,5 +27,5 @@ struct DeliveryInfoView: View {
 }
 
 #Preview {
-    DeliveryInfoView(address: "Flat no: 35093, A - Wing Hianadani Gardens Near I.I.T Powai, Powai Area Mumbaim Maharashtra", progress: 0.4, estimatedDeliveryTime: 15)
+    DeliveryInfoView(address: "Flat no: 35093, A - Wing Hianadani Gardens Near I.I.T Powai, Powai Area Mumbaim Maharashtra", progress: 0.4, remainingDeliveryTime: "")
 }

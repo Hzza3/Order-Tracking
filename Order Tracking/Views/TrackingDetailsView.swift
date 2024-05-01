@@ -8,62 +8,113 @@
 import SwiftUI
 
 struct TrackingDetailsView: View {
-    let type: String
+    let statusesInformation: StatusTracking
+    @State var remainingTime: String?
     
     var body: some View {
         
-        switch type {
-        case "v":
+        switch statusesInformation.type {
+        case "vertical":
             buildVerticalStatusView()
         default:
             buildHorizontalStatusView()
-                
+                .onAppear {
+                    remainingTime = getRemainingDeliveryTime() ?? ""
+                }
         }
     }
 }
 
 extension TrackingDetailsView {
+    
     @ViewBuilder
     func buildVerticalStatusView() -> some View {
+        
         VStack(spacing: 0) {
-            
-            HStack(alignment: .top, spacing: 30) {
-                StatusTrackView(type: type, isLast: false, icon: "clock", iconColor: .blue, trackColor: .blue)
-                StatusDetailsView(status: "Order Recieved", date: "09:10 AM, 9 May 2018", showDate: true)
-            }
-            
-            HStack(alignment: .top, spacing: 30) {
-                StatusTrackView(type: type, isLast: false, icon: "map", iconColor: .blue, trackColor: .blue)
-                StatusDetailsView(status: "On the way", date: "09:15 AM, 9 May 2018", showDate: true)
-            }
-            
-            HStack(alignment: .top, spacing: 30) {
-                StatusTrackView(type: type, isLast: true, icon: "shippingbox", iconColor: .blue, trackColor: .blue)
-                StatusDetailsView(status: "Delivered", date: "Finish time in 3 min    ", showDate: true)
+            if let timeline = statusesInformation.timeLine {
+                ForEach(timeline, id: \.self) { status in
+                    HStack(alignment: .top, spacing: 30) {
+                        StatusTrackView(
+                            type: statusesInformation.type,
+                            isLast: status == timeline.last,
+                            icon: status.icon,
+                            iconColor: Color(wordName: status.iconColor),
+                            trackColor: Color(wordName: status.trackColor)
+                        )
+                        StatusDetailsView(
+                            status: status.status,
+                            date: status.date,
+                            showDate: true
+                        )
+                    }
+                }
             }
         }
     }
     
     @ViewBuilder
     func buildHorizontalStatusView() -> some View {
-            
-            VStack(alignment: .center, spacing: 5) {
-                DeliveryInfoView(address: "Flat no: 35093, A - Wing Hianadani Gardens Near I.I.T Powai, Powai Area Mumbaim Maharashtra", progress: 0.6, estimatedDeliveryTime: 3)
-                HStack(spacing: 0) {
-                    StatusTrackView(type: type, isLast: false, icon: "checkmark.circle.fill", iconColor: .red, trackColor: .gray.opacity(0.5))
-                    StatusTrackView(type: type, isLast: false, icon: "circle", iconColor: .gray.opacity(0.5), trackColor: .gray.opacity(0.5))
-                    StatusTrackView(type: type, isLast: true, icon: "circle", iconColor: .gray.opacity(0.5), trackColor: .gray.opacity(0.5))
-                }
-                StatusDetailsView(status: "Delivered", date: "Finish time in 3 min    ", showDate: false)
-            }
-            .border(.gray.opacity(0.4))
-            .padding(.horizontal, 40)
         
+        VStack(alignment: .center, spacing: 5) {
+            if let deliveryInfo = statusesInformation.delivery {
+                DeliveryInfoView(
+                    address: deliveryInfo.addrress,
+                    progress: 0.6,
+                    remainingDeliveryTime: remainingTime
+                )
+            }
+            
+            if let timeline = statusesInformation.timeLine {
+                HStack(spacing: 0) {
+                    
+                    ForEach(timeline, id: \.self) { status in
+                        StatusTrackView(
+                            type: statusesInformation.type,
+                            isLast: status == timeline.last,
+                            icon: status.icon,
+                            iconColor: Color(wordName: status.iconColor),
+                            trackColor: Color(wordName: status.trackColor)
+                        )
+                    }
+                    
+                }
+              
+                StatusDetailsView(status: timeline.first{$0.isCurrent == true}?.status ?? "",
+                                  date: "",
+                                  showDate: false
+                )
+               
+            }
+        }
+        .border(.gray.opacity(0.4))
+        .padding(.horizontal, 40)
     }
- 
+    
+    func getRemainingDeliveryTime() -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:SSxxxxx"
+        guard let deliveryDateString = statusesInformation.delivery?.date else { return nil }
+        guard let isoDeliveryDate = formatter.date(from: deliveryDateString) else { return nil }
+        let remainingTime = isoDeliveryDate - Date()
+        var remainigTimeString = ""
+        if let month = remainingTime.month, month > 0 {
+            remainigTimeString += "\(month) Months, "
+        }
+        if let days = remainingTime.day, days > 0 {
+            remainigTimeString += "\(days) Days, "
+        }
+        if let hours = remainingTime.hour, hours > 0 {
+            remainigTimeString += "\(hours) Hours, "
+        }
+        if let mins = remainingTime.minute, mins > 0 {
+            remainigTimeString += "\(mins) Mins"
+        }
+        return remainigTimeString
+    }
+    
     
 }
 
-#Preview {
-    TrackingDetailsView(type: "v")
-}
+//#Preview {
+//    TrackingDetailsView(type: "v")
+//}

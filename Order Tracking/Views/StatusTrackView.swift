@@ -16,7 +16,7 @@ struct StatusTrackView: View {
     let trackColor: Color
     
     var body: some View {
-        if type == "v" {
+        if type == "vertical" {
             buildVerticalStatusTrack()
         } else {
             buildHorizontalStatusTrack()
@@ -62,7 +62,7 @@ extension StatusTrackView {
 
 
 #Preview {
-    StatusTrackView(type: "v", isLast: false, icon: "clock.fill", iconColor: .red, trackColor: .blue)
+    StatusTrackView(type: "vertical", isLast: false, icon: "clock.fill", iconColor: .red, trackColor: .blue)
 }
 
 

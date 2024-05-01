@@ -1,0 +1,38 @@
+{
+    "title": "Order Tracking",
+    "icon": "fries",
+    "tracking": {
+        "type": "vertical",
+        "time_line": [
+            {
+                "status": "Order Recieved",
+                "icon": "clock",
+                "iconColor": "blue",
+                "trackColor": "blue",
+                "date": "2018-05-09T09:10:30+00:00",
+                "isCurrent": true
+            },
+            {
+                "status": "On the way",
+                "icon": "map",
+                "iconColor": "blue",
+                "trackColor": "blue",
+                "date":  "2018-05-09T09:15:20+00:00",
+                "isCurrent": false
+            },
+            {
+                "status": "Order Delivered",
+                "icon": "shippingbox",
+                "iconColor": "blue",
+                "trackColor": "blue",
+                "date":  "2018-05-09T09:40:10+00:00",
+                "isCurrent": false
+            }
+        ],
+        "delivery": {
+            "addrress": "Flat no: 35093, A - Wing Hianadani Gardens Near I.I.T Powai, Powai Area Mumbaim Maharashtra",
+            "date": "2018-05-09T09:40:10+00:00"
+        }
+    }
+    
+}

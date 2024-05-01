@@ -26,7 +26,7 @@ struct StatusDetailsView: View {
                     .resizable()
                     .foregroundColor(.blue)
                     .frame(width: 16, height: 16)
-                Text(date)
+                Text(getReadableDate(from: date))
                     .font(.caption)
                     .fontWeight(.light)
             }.opacity(showDate ? 1.0 : 0.0)

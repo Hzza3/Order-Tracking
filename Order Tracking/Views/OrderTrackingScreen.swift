@@ -8,17 +8,32 @@
 import SwiftUI
 
 struct OrderTrackingScreen: View {
+    
+    @StateObject var viewModel = OrderTrackingViewModel()
+    
     var body: some View {
         NavigationStack {
-            VStack() {
-                Image("fries")
-                    .resizable()
-                    .frame(width: 150, height: 200)
-                TrackingDetailsView(type: "h")
-                Spacer()
+            if let trackingInfo = viewModel.trackingInformation {
+                VStack() {
+                    if let icon = trackingInfo.icon {
+                        Image(icon)
+                            .resizable()
+                            .frame(width: 150, height: 200)
+                    }
+                    if let tracking = trackingInfo.tracking {
+                        TrackingDetailsView(statusesInformation: tracking)
+                    }
+                   
+                    Spacer()
+                }
+                .navigationTitle("Track your order")
+            } else {
+                Text("No Tracking Information")
+                    .navigationTitle("Track your order")
             }
-            .navigationTitle("Track your order")
-            
+        }
+        .onAppear {
+            viewModel.getTrackingInfo()
         }
     }
 }
