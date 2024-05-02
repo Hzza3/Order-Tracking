@@ -7,15 +7,16 @@
 
 import Foundation
 
-final class OrderTrackingViewModel: ObservableObject {
+@Observable
+final class OrderTrackingViewModel {
     
-    @Published var trackingInformation: TrackingInformation? {
+    var trackingInformation: TrackingInformation? {
         didSet {
             currentStatus = trackingInformation?.tracking?.timeLine?.first {$0.isCurrent == true}
         }
     }
     
-    @Published var currentStatus: StatusTrackingItem?
+    var currentStatus: StatusTrackingItem?
     
     var isVerticalView: Bool = true {
         didSet {

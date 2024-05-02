@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OrderTrackingScreen: View {
     
-    @StateObject var viewModel = OrderTrackingViewModel()
+    @State private var viewModel = OrderTrackingViewModel()
     
     var body: some View {
         NavigationStack {
