@@ -17,11 +17,17 @@ final class OrderTrackingViewModel: ObservableObject {
     
     @Published var currentStatus: StatusTrackingItem?
     
-    func getTrackingInfo() {
-        trackingInformation = NetworkManager.shared.getTrackingData(forName: "HorizontalDesignConfigurations")
+    var isVerticalView: Bool = true {
+        didSet {
+            getTrackingInfo(isVertical: isVerticalView)
+        }
     }
-   
-
+    
+    func getTrackingInfo(isVertical: Bool) {
+        let horizontal = "HorizontalDesignConfigurations"
+        let vertical = "VerticalDesignConfigurations"
+        trackingInformation = NetworkManager.shared.getTrackingData(forName: isVertical ? vertical : horizontal)
+    }
     
 }	
 

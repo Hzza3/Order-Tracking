@@ -23,17 +23,25 @@ struct OrderTrackingScreen: View {
                     if let tracking = trackingInfo.tracking {
                         TrackingDetailsView(statusesInformation: tracking)
                     }
-                   
+                    
                     Spacer()
                 }
                 .navigationTitle("Track your order")
+                .navigationBarTitleDisplayMode(.automatic)
+                .toolbar{
+                    ToolbarItem(placement: .primaryAction) {
+                        Toggle("Vertical", isOn: $viewModel.isVerticalView)
+                            .toggleStyle(SwitchToggleStyle(tint: .blue))
+                    }
+                }
+               
             } else {
                 Text("No Tracking Information")
                     .navigationTitle("Track your order")
             }
         }
         .onAppear {
-            viewModel.getTrackingInfo()
+            viewModel.getTrackingInfo(isVertical: viewModel.isVerticalView)
         }
     }
 }

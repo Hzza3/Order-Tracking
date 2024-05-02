@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct TrackingDetailsView: View {
-    let statusesInformation: StatusTracking
+    
     @State var remainingTime: String?
+    let statusesInformation: StatusTracking
     
     var body: some View {
         
@@ -54,40 +55,32 @@ extension TrackingDetailsView {
     
     @ViewBuilder
     func buildHorizontalStatusView() -> some View {
-        
-        VStack(alignment: .center, spacing: 5) {
-            if let deliveryInfo = statusesInformation.delivery {
-                DeliveryInfoView(
-                    address: deliveryInfo.addrress,
-                    progress: 0.6,
-                    remainingDeliveryTime: remainingTime
-                )
-            }
-            
-            if let timeline = statusesInformation.timeLine {
-                HStack(spacing: 0) {
-                    
-                    ForEach(timeline, id: \.self) { status in
-                        StatusTrackView(
-                            type: statusesInformation.type,
-                            isLast: status == timeline.last,
-                            icon: status.icon,
-                            iconColor: Color(wordName: status.iconColor),
-                            trackColor: Color(wordName: status.trackColor)
-                        )
-                    }
-                    
+        GroupBox {
+            VStack(alignment: .center, spacing: 5) {
+                if let deliveryInfo = statusesInformation.delivery {
+                    DeliveryInfoView(
+                        address: deliveryInfo.addrress,
+                        progress: 0.6,
+                        remainingDeliveryTime: remainingTime)
                 }
-              
-                StatusDetailsView(status: timeline.first{$0.isCurrent == true}?.status ?? "",
-                                  date: "",
-                                  showDate: false
-                )
-               
+                if let timeline = statusesInformation.timeLine {
+                    HStack(spacing: 0) {
+                        ForEach(timeline, id: \.self) { status in
+                            StatusTrackView(
+                                type: statusesInformation.type,
+                                isLast: status == timeline.last,
+                                icon: status.icon,
+                                iconColor: Color(wordName: status.iconColor),
+                                trackColor: Color(wordName: status.trackColor))
+                        }
+                    }
+                    StatusDetailsView(status: timeline.first{$0.isCurrent == true}?.status ?? "",
+                                      date: "",
+                                      showDate: false)
+                }
             }
         }
-        .border(.gray.opacity(0.4))
-        .padding(.horizontal, 40)
+        .padding(.horizontal, 20)
     }
     
     func getRemainingDeliveryTime() -> String? {
@@ -114,7 +107,3 @@ extension TrackingDetailsView {
     
     
 }
-
-//#Preview {
-//    TrackingDetailsView(type: "v")
-//}
